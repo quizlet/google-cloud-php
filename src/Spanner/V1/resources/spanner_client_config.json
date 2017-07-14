@@ -10,13 +10,13 @@
       },
       "retry_params": {
         "default": {
-          "initial_retry_delay_millis": 100,
+          "initial_retry_delay_millis": 400,
           "retry_delay_multiplier": 1.3,
-          "max_retry_delay_millis": 500,
-          "initial_rpc_timeout_millis": 200,
+          "max_retry_delay_millis": 2000,
+          "initial_rpc_timeout_millis": 400,
           "rpc_timeout_multiplier": 0.8,
           "max_rpc_timeout_millis": 500,
-          "total_timeout_millis": 500
+          "total_timeout_millis": 2000
         }
       },
       "methods": {
@@ -36,33 +36,33 @@
           "retry_params_name": "default"
         },
         "ExecuteSql": {
-          "timeout_millis": 60,
+          "timeout_millis": 400,
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
         "ExecuteStreamingSql": {
-          "timeout_millis": 60
+          "timeout_millis": 400
         },
         "Read": {
-          "timeout_millis": 60,
+          "timeout_millis": 400,
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
         "StreamingRead": {
-          "timeout_millis": 60
+          "timeout_millis": 400
         },
         "BeginTransaction": {
-          "timeout_millis": 60,
+          "timeout_millis": 400,
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
         "Commit": {
-          "timeout_millis": 200,
+          "timeout_millis": 400,
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         },
         "Rollback": {
-          "timeout_millis": 60,
+          "timeout_millis": 400,
           "retry_codes_name": "non_idempotent",
           "retry_params_name": "default"
         }
